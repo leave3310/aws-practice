@@ -1,0 +1,24 @@
+# Local Terraform directories
+# 這個資料夾包含了 Terraform 下載的 provider 插件，不需要上傳
+.terraform/
+
+# .tfstate files
+# 警告：這是最重要的部分！tfstate 檔案會記錄你所有 AWS 資源的詳細資訊，
+# 其中可能包含 IP 位址、密碼、金鑰等「明文」祕密，絕對禁止上傳！
+terraform.tfstate
+terraform.tfstate.backup
+
+# Crash log files
+crash.log｀
+crash.*.log
+
+# 只會在本地出現的 terraform 覆蓋資源檔案，不需要上傳
+override.tf
+override.tf.json
+*.override.tf
+*.override.tf.json
+
+# CLI configuration files
+# for 個人使用的設定檔案
+.terraformrc
+terraform.rc
