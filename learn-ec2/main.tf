@@ -11,7 +11,7 @@ terraform {
   }
 }
 
-// 設定 AWS Provider 的區域
+// 設定 AWS Provider[內碼]  的區域
 // 推薦使用離台灣近的東京區域
 provider "aws" {
   region = "ap-northeast-1"
