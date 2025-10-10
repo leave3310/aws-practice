@@ -156,3 +156,31 @@ resource "aws_ec2_instance" "app_server" {
   }
 }
 ```
+
+# 架構圖
+```mermaid
+graph TD;
+    subgraph "第一步：定義角色與權限"
+        A("建立 IAM Role<br>(aws_iam_role)")
+        P("附加權限策略<br>(aws_iam_role_policy_attachment)")
+    end
+
+    subgraph "第二步：建立 Profile 容器"
+        B("建立 IAM Instance Profile<br>(aws_iam_instance_profile)")
+    end
+
+    subgraph "第三步：建立實例並綁定"
+        C("建立 EC2 實例<br>(aws_ec2_instance)")
+    end
+
+    %% 定義流程與關係
+    A -- "賦予具體權限" --> P;
+    A -- "將 Role 放入容器" --> B;
+    B -- "將 Profile 關聯至" --> C;
+
+    %% 樣式
+    style A fill:#ff9999,stroke:#333,stroke-width:2px
+    style P fill:#ffcc99,stroke:#333,stroke-width:2px
+    style B fill:#99ccff,stroke:#333,stroke-width:2px
+    style C fill:#99ff99,stroke:#333,stroke-width:2px
+```
