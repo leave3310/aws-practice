@@ -1,5 +1,6 @@
+# 架構圖
 ```mermaid
-graph TD
+graph LR
     subgraph "✅ 正常、安全的存取流程 (整合版)"
         User[("💻<br>使用者")] -->|"瀏覽 CloudFront 網址<br>https://...cloudfront.net"| CF[("🌐<br>CloudFront 全球節點<br>內有快取 (Cache)")]
         
