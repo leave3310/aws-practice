@@ -7,9 +7,10 @@
 # 其中可能包含 IP 位址、密碼、金鑰等「明文」祕密，絕對禁止上傳！
 terraform.tfstate
 terraform.tfstate.backup
+terraform.tfvars
 
 # Crash log files
-crash.log｀
+crash.log
 crash.*.log
 
 # 只會在本地出現的 terraform 覆蓋資源檔案，不需要上傳
@@ -22,3 +23,5 @@ override.tf.json
 # for 個人使用的設定檔案
 .terraformrc
 terraform.rc
+
+function.zip
